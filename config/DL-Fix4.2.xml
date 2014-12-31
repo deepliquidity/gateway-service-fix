@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<fix major='4' type='FIX' servicepack='0' minor='2'>
+ <header>
+  <field name='BeginString' required='Y' />
+  <field name='BodyLength' required='Y' />
+  <field name='MsgType' required='Y' />
+ </header>
+ <messages>
+  <message name='Heartbeat' msgcat='admin' msgtype='0'>
+   <field name='TestReqID' required='N' />
+  </message>
+ </messages>
+ <trailer>
+  <field name='SignatureLength' required='N' />
+  <field name='Signature' required='N' />
+  <field name='CheckSum' required='Y' />
+ </trailer>
+ <components />
+ <fields>
+  <field number='8' name='BeginString' type='STRING' />
+  <field number='9' name='BodyLength' type='INT' />
+  <field number='10' name='CheckSum' type='STRING' />
+  <field number='112' name='TestReqID' type='STRING' />
+  <field number='93' name='SignatureLength' type='LENGTH' />
+  <field number='89' name='Signature' type='DATA' />
+  <field number='35' name='MsgType' type='STRING'>
+   <value enum='0' description='HEARTBEAT' />
+  </field>
+ </fields>
+</fix>

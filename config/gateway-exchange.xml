@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<DeepLiquidity>
+  <exchange>
+    <name>My_First_Exchange</name>
+    <session-config>filename</session-config>
+  </exchange>
+</DeepLiquidity>
